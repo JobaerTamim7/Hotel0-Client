@@ -13,7 +13,7 @@ export default function NavBar() {
   const { user, logOut } = useAuth();
 
   return (
-    <div className="navbar bg-base-100 shadow-[0px_0px_10px] shadow-white px-10 py-8">
+    <div className="navbar bg-base-100 shadow-[0px_0px_10px] shadow-white px-10 py-8 backdrop-blur-sm">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

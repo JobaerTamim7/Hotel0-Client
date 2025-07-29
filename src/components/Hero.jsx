@@ -6,7 +6,7 @@ import { CgChevronDoubleRight } from "react-icons/cg";
 export default function Hero() {
   const navigate = useNavigate();
   return (
-    <section className="h-[70vh] px-4 py-10 flex flex-col lg:flex-row-reverse bg-neutral items-center text-neutral-content gap-8 mx-auto rounded-2xl">
+    <section className="h-[81vh] px-4 py-10 flex flex-col lg:flex-row-reverse bg-neutral/30 items-center text-neutral-content gap-8 mx-auto rounded-2xl">
       <div className="w-full h-full lg:w-1/2 overflow-hidden rounded-xl">
         <Swiping />
       </div>
