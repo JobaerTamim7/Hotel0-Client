@@ -50,6 +50,9 @@ importers:
       react-toastify:
         specifier: ^11.0.5
         version: 11.0.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      rive-react:
+        specifier: ^4.22.1
+        version: 4.22.1(react@19.1.1)
       swiper:
         specifier: ^11.2.10
         version: 11.2.10
@@ -660,6 +663,18 @@ packages:
       leaflet: ^1.9.0
       react: ^19.0.0
       react-dom: ^19.0.0
+
+  '@rive-app/canvas-lite@2.30.4':
+    resolution: {integrity: sha512-FhvC62QhZ4yLclH+jWA1V5oypTQxAllXqrf1RQZYEtO0lSL5vPQk82hzshuH+k4X4aJvaCCDq9c5unzuuYUyoA==}
+
+  '@rive-app/canvas@2.30.4':
+    resolution: {integrity: sha512-kq8pUw6aexyEqnDG2hpw8NJiHfhaTycN6d+6Q1ogKG492NKWbcWHcVzXlcl77x0uWSEAKyKrOxzwOb+ebwUvZw==}
+
+  '@rive-app/webgl2@2.30.4':
+    resolution: {integrity: sha512-/bMKes3KW9Y75QBOf35zDvC+hZyOyBa+0rb7fWcgNxNxv7QRlZANNbouQzujtttGjWroZbWKFyrKNBGNofYklg==}
+
+  '@rive-app/webgl@2.30.4':
+    resolution: {integrity: sha512-TixvKJVE90ZSm0CiCwiSmu24BvUl2N2DvXSlcl4VmL7UlKwfWtuKSM2bH9QjtcCID03pjfuP+tFt+hRPW+X6iw==}
 
   '@rolldown/pluginutils@1.0.0-beta.27':
     resolution: {integrity: sha512-+d0F4MKMCbeVUJwG96uQ4SgAznZNSq93I3V+9NHA4OpvqG8mRCpGdKmK8l/dl02h2CCDHwW2FqilnTyDcAnqjA==}
@@ -1532,6 +1547,11 @@ packages:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
     engines: {node: '>=4'}
 
+  rive-react@4.22.1:
+    resolution: {integrity: sha512-ZRAOUnd1I5Mn8PZZ2X74esCXgOngwWs+SWuUP8xZq4nDsAICb8duVimr1TKu/MRBPJMSwIMe429FwtzfxETenQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0
+
   rollup@4.46.1:
     resolution: {integrity: sha512-33xGNBsDJAkzt0PvninskHlWnTIPgDtTwhg0U38CUoNP/7H6wI2Cz6dUeoNPbjdTdsYTGuiFFASuUOWovH0SyQ==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
@@ -2333,6 +2353,14 @@ snapshots:
       leaflet: 1.9.4
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
+
+  '@rive-app/canvas-lite@2.30.4': {}
+
+  '@rive-app/canvas@2.30.4': {}
+
+  '@rive-app/webgl2@2.30.4': {}
+
+  '@rive-app/webgl@2.30.4': {}
 
   '@rolldown/pluginutils@1.0.0-beta.27': {}
 
@@ -3137,6 +3165,14 @@ snapshots:
   require-directory@2.1.1: {}
 
   resolve-from@4.0.0: {}
+
+  rive-react@4.22.1(react@19.1.1):
+    dependencies:
+      '@rive-app/canvas': 2.30.4
+      '@rive-app/canvas-lite': 2.30.4
+      '@rive-app/webgl': 2.30.4
+      '@rive-app/webgl2': 2.30.4
+      react: 19.1.1
 
   rollup@4.46.1:
     dependencies:

@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import RoomPage from "./pages/RoomPage";
 import RoomDetails from "./pages/RoomDetails";
 import MyRoomPage from "./pages/MyRooms";
-
+import Error from "./pages/Error";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -36,7 +36,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "*",
-        element: <div>404 Not Found</div>,
+        element: <Error />,
       },
     ],
   },
@@ -55,11 +55,7 @@ export const router = createBrowserRouter([
     ],
   },
   {
-    path: "/special-offers",
-    element: <div>Special Offers Page</div>,
-  },
-  {
-    path: "/404",
-    element: <div>404 Not Found</div>,
+    path: "*",
+    element: <Error />,
   },
 ]);
