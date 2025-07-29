@@ -4,6 +4,7 @@ import { createBrowserRouter } from "react-router";
 import PrivateRouteProvider from "./provider/PrivateRouteProvider";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Home from "./pages/Home";
 
 export const router = createBrowserRouter([
   {
@@ -12,7 +13,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <div>Welcome to the Hotel Booking App</div>,
+        element: <Home />,
       },
       {
         path: "rooms",
