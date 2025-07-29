@@ -16,9 +16,12 @@ export default function RoomDetails() {
 
   const bookMutation = useRoomBooking(roomID);
 
-  const { data, isLoading } = useRoomDetails(roomID);
+  const { data, isLoading, error } = useRoomDetails(roomID);
   if (isLoading) {
     return <div>Loading room details...</div>;
+  }
+  if (error) {
+    return <Error />;
   }
   return (
     <>
