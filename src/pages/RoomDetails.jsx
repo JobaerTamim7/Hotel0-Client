@@ -5,6 +5,7 @@ import {
   useRoomDelete,
 } from "../hooks/useRoom";
 import ReviewForm from "../components/ReviewBox";
+import AllReviews from "../components/AllReviews";
 
 export default function RoomDetails() {
   document.title = "Hotel-0 Room Details";
@@ -93,7 +94,7 @@ export default function RoomDetails() {
           )}
         </div>
       </div>
-      {/* Reviews Section */}
+      <AllReviews roomID={roomID} />
       {mybooked && <ReviewForm roomID={roomID} />}
     </>
   );
