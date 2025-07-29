@@ -7,6 +7,7 @@ import Register from "./pages/Register";
 import Home from "./pages/Home";
 import RoomPage from "./pages/RoomPage";
 import RoomDetails from "./pages/RoomDetails";
+import MyRoomPage from "./pages/MyRooms";
 
 export const router = createBrowserRouter([
   {
@@ -29,7 +30,7 @@ export const router = createBrowserRouter([
         path: "my-bookings",
         element: (
           <PrivateRouteProvider>
-            <div>My Bookings Page</div>
+            <MyRoomPage />
           </PrivateRouteProvider>
         ),
       },

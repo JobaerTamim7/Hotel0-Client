@@ -1,8 +1,10 @@
 import { useParams } from "react-router";
-import { useRoomDetails } from "../hooks/useRoom";
+import { useRoomDetails, useRoomBooking } from "../hooks/useRoom";
 
 export default function RoomDetails() {
   const { roomID } = useParams();
+
+  const bookMutation = useRoomBooking(roomID);
 
   const { data, isLoading } = useRoomDetails(roomID);
   if (isLoading) {
@@ -51,7 +53,10 @@ export default function RoomDetails() {
         {/* Book Now Button */}
         <div className="mt-8">
           {data.roomStatus === "available" ? (
-            <button className="btn btn-primary text-white w-full md:w-auto">
+            <button
+              className="btn btn-primary text-white w-full md:w-auto"
+              onClick={() => bookMutation.mutate()}
+            >
               Book Now
             </button>
           ) : (
