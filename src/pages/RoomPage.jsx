@@ -3,6 +3,7 @@ import { useRoom } from "../hooks/useRoom";
 import RoomCard from "../components/RoomCard";
 
 export default function RoomPage() {
+    document.title = "Hotel-0 Rooms";
   const { data, isLoading, error } = useRoom();
 
   console.log("Rooms data:", data);

@@ -2,8 +2,16 @@ import RoomCard from "../components/RoomCard";
 import { useMyRooms } from "../hooks/useRoom";
 
 export default function MyRoomPage() {
+  document.title = "Hotel-0 My Rooms";
   const { data, isLoading, error } = useMyRooms();
-
+  if (Array.isArray(data) && data.length === 0) {
+    return (
+      <div className="py-10 px-4 md:px-10">
+        <h1 className="text-3xl font-bold mb-6">Available Rooms</h1>
+        <div>No rooms booked yet.</div>
+      </div>
+    );
+  }
 
   return (
     <div className="py-10 px-4 md:px-10">
@@ -22,7 +30,8 @@ export default function MyRoomPage() {
               title={room.roomCateory}
               description={room.roomDescription}
               status={room.roomStatus}
-              hideStatus={true} 
+              hideStatus={true}
+              mybooked={true}
             />
           ))}
         </div>

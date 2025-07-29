@@ -2,6 +2,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import useAxios from "./useAxios";
 import useAuth from "./useAuth";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router";
 
 export function useRoom() {
   const axiosInstance = useAxios();
@@ -56,6 +57,29 @@ export function useMyRooms() {
     queryFn: async () => {
       const response = await axiosInstance.get(`/rooms/my-rooms/${user.email}`);
       return response.data;
+    },
+  });
+}
+
+export function useRoomDelete(roomId) {
+  const axiosInstance = useAxios();
+  const queryClient = useQueryClient();
+  const { user } = useAuth();
+  const navigate = useNavigate();
+
+  return useMutation({
+    mutationKey: ["deleteRoomBooking", roomId],
+    mutationFn: async () => {
+      const response = await axiosInstance.delete(`/rooms/cancel-booking`, {
+        data: { userEmail: user.email, roomId: roomId },
+      });
+      return response.data;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries(["myRooms", user.email]);
+      queryClient.invalidateQueries(["roomDetails", roomId]);
+      toast.success("Booking cancelled successfully!");
+      navigate("/my-bookings");
     },
   });
 }

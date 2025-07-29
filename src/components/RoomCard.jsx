@@ -7,13 +7,14 @@ export default function RoomCard({
   description,
   status,
   hideStatus = false,
+  mybooked = false,
 }) {
   const navigate = useNavigate();
 
   return (
     <div
       className="card bg-base-100 w-96 shadow-[0px_0px_4px] shadow-white"
-      onClick={() => navigate(`/rooms/${id}`)}
+      onClick={() => navigate(`/rooms/${id}`, { state: { mybooked } })}
     >
       <figure>
         <img src={image} alt="Shoes" />
