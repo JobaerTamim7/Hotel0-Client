@@ -16,7 +16,6 @@ export default function Home() {
         <HomeMapSideCard />
       </div>
       <div className="px-10 mt-10">
-        <h2 className="text-3xl font-bold mb-6">Frequently Asked Questions</h2>
         <FAQSection />
       </div>
     </div>
