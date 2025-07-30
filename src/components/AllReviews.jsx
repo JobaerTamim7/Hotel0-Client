@@ -1,28 +1,33 @@
 import { useQuery } from "@tanstack/react-query";
 import { FaStar } from "react-icons/fa";
-import { data } from "react-router";
 import useAxios from "../hooks/useAxios";
 
 const AllReviews = ({ roomID }) => {
   const axiosInstance = useAxios();
-  const { data: reviews, isLoading } = useQuery({
+  const {
+    data: reviews,
+    isLoading,
+  } = useQuery({
     queryKey: ["reviews", roomID],
     queryFn: async () => {
       const response = await axiosInstance.get(`/reviews/${roomID}`);
       return response.data;
     },
-    refetchOnWindowFocus: false,
-    staleTime: 1000 * 60 * 5,
   });
+
   if (isLoading) {
     return <div className="text-center text-white">Loading reviews...</div>;
   }
-  if (!data || data.length === 0) {
+
+  if (
+    !reviews ||
+    reviews.length === 0 
+  ) {
     return <div className="text-center text-white">No reviews yet.</div>;
   }
   return (
     <div className="grid grid-cols-3 gap-4 mx-auto mt-8 px-6">
-      {reviews.map((review, index) => (
+      {reviews?.map((review, index) => (
         <div
           key={index}
           className="p-4 border border-gray-300 rounded-lg shadow-md bg-white"
