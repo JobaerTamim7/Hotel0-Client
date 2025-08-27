@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { FaStar } from "react-icons/fa";
-import useAxios from "../hooks/useAxios";
-import Loading from "./Loading";
+import useAxios from "../../hooks/useAxios";
+import Loading from "../Loading";
 
 const AllReviews = ({ roomID }) => {
   const axiosInstance = useAxios();
@@ -24,7 +24,6 @@ const AllReviews = ({ roomID }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 px-6">
       {reviews?.map((review, index) => (
-        
         <div
           key={index}
           className="p-4 border rounded-lg bg-backgorund text-white"

@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "../components/Home/Hero";
+import Hero from "../components/Home/Hero/Hero";
 import HomeMap from "../components/Home/FindUs/HomeMap";
 import HomeMapSideCard from "../components/Home/FindUs/HomeMapSideCard";
 import FAQSection from "../components/Home/FAQ/FAQ";

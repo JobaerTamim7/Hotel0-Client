@@ -9,6 +9,7 @@ import RoomPage from "./pages/RoomPage";
 import RoomDetails from "./pages/RoomDetails";
 import MyRoomPage from "./pages/MyRooms";
 import Error from "./pages/Error";
+import Contact from "./pages/Contact";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
             <MyRoomPage />
           </PrivateRouteProvider>
         ),
+      },
+      {
+        path: "contact",
+        element: <Contact />,
       },
       {
         path: "*",

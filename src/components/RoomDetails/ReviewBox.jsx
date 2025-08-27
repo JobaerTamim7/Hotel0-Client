@@ -2,9 +2,9 @@ import { useForm, Controller } from "react-hook-form";
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import { useMutation } from "@tanstack/react-query";
-import useAxios from "../hooks/useAxios";
+import useAxios from "../../hooks/useAxios";
 import { toast } from "react-toastify";
-import useAuth from "../hooks/useAuth";
+import useAuth from "../../hooks/useAuth";
 
 const ReviewForm = ({ roomID }) => {
   const {

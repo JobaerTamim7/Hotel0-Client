@@ -4,8 +4,8 @@ import {
   useRoomBooking,
   useRoomDelete,
 } from "../hooks/useRoom";
-import ReviewForm from "../components/ReviewBox";
-import AllReviews from "../components/AllReviews";
+import ReviewForm from "../components/RoomDetails/ReviewBox";
+import AllReviews from "../components/RoomDetails/AllReviews";
 import Loading from "../components/Loading";
 
 export default function RoomDetails() {

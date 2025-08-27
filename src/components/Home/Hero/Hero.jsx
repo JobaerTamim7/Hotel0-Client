@@ -1,5 +1,4 @@
-import React from "react";
-import Swiping from "../Swiping";
+import Swiping from "./Swiping";
 import { useNavigate } from "react-router";
 import { CgChevronDoubleRight } from "react-icons/cg";
 

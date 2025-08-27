@@ -1,16 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router";
-import useAuth from "../hooks/useAuth";
+import useAuth from "../../hooks/useAuth";
 import { FaSignOutAlt } from "react-icons/fa";
+import { navItems } from "./NavItems";
 
 export default function NavBar() {
-  const navItems = [
-    { name: "Home", path: "/" },
-    { name: "Rooms", path: "/rooms" },
-    { name: "My Bookings", path: "/my-bookings" },
-  ];
-
   const { user, logOut } = useAuth();
+  console.log(navItems);
 
   return (
     <div className="navbar bg-base-100 shadow-[0px_0px_10px] shadow-white px-10 py-8 backdrop-blur-sm">
@@ -37,9 +33,11 @@ export default function NavBar() {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            {navItems.map((item) => (
-              <NavLink to={item.path}> {item.name} </NavLink>
-            ))}
+            {navItems.map((item) =>
+              item.userOnly && !user ? null : (
+                <NavLink to={item.path}> {item.name} </NavLink>
+              )
+            )}
           </ul>
         </div>
         <div className="flex items-center gap-3">
@@ -53,9 +51,11 @@ export default function NavBar() {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-10">
-          {navItems.map((item) => (
-            <NavLink to={item.path}> {item.name} </NavLink>
-          ))}
+          {navItems.map((item) =>
+            item.userOnly && !user ? null : (
+              <NavLink to={item.path}> {item.name} </NavLink>
+            )
+          )}
         </ul>
       </div>
       <div className="navbar-end gap-10">

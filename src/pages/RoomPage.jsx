@@ -1,6 +1,6 @@
 import React from "react";
 import { useRoom } from "../hooks/useRoom";
-import RoomCard from "../components/RoomCard";
+import RoomCard from "../components/RoomDetails/RoomCard";
 import Loading from "../components/Loading";
 
 export default function RoomPage() {

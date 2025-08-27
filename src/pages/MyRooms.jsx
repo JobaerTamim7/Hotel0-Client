@@ -1,6 +1,6 @@
 import Loading from "../components/Loading";
 import NoRoomBooked from "../components/NoRoomBooked";
-import RoomCard from "../components/RoomCard";
+import RoomCard from "../components/RoomDetails/RoomCard";
 import { useMyRooms } from "../hooks/useRoom";
 
 export default function MyRoomPage() {
