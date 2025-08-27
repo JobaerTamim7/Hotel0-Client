@@ -24,6 +24,7 @@ export default function RoomDetails() {
   if (error) {
     return <Error />;
   }
+
   return (
     <>
       <div className="shadow-[0px_0px_10px] shadow-white/60 rounded-lg overflow-hidden max-w-4xl mx-auto my-10">
@@ -98,6 +99,26 @@ export default function RoomDetails() {
           )}
         </div>
       </div>
+      {data.roomDetails && (
+        <div className="overflow-x-auto mt-4 mx-auto max-w-4xl px-4">
+          <table className="table table-zebra w-full">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Detail</th>
+              </tr>
+            </thead>
+            <tbody>
+              {Object.entries(data.roomDetails).map(([key, value]) => (
+                <tr key={key}>
+                  <td className="font-bold">{key}</td>
+                  <td>{String(value)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
       <AllReviews roomID={roomID} />
       {mybooked && <ReviewForm roomID={roomID} />}
     </>

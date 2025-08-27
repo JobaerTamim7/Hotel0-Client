@@ -22,14 +22,14 @@ const AllReviews = ({ roomID }) => {
     return <div className="text-center text-white">No reviews yet.</div>;
   }
   return (
-    <div className="grid grid-cols-3 gap-4 mx-auto mt-8 px-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 px-6">
       {reviews?.map((review, index) => (
+        
         <div
           key={index}
-          className="p-4 border border-gray-300 rounded-lg shadow-md bg-white"
+          className="p-4 border rounded-lg bg-backgorund text-white"
         >
           <div className="flex items-center space-x-2">
-            {/* Rating */}
             <div className="flex text-yellow-500">
               {Array.from({ length: 5 }, (_, i) => (
                 <FaStar
@@ -40,16 +40,11 @@ const AllReviews = ({ roomID }) => {
                 />
               ))}
             </div>
-            <span className="text-sm text-gray-500">
-              ({review.rating} Stars)
-            </span>
+            <span className="text-sm">({review.rating} Stars)</span>
           </div>
-          {/* User Email */}
-          <p className="text-sm text-gray-600 mt-2">{review.userEmail}</p>
-          {/* Comment */}
-          <p className="mt-2 text-gray-700">{review.comment}</p>
-          {/* Date */}
-          <p className="mt-2 text-sm text-gray-500">
+          <p className="text-sm mt-2">{review.userEmail}</p>
+          <p className="mt-2">{review.comment}</p>
+          <p className="mt-2 text-sm">
             Reviewed on {new Date(review.createdAt).toLocaleDateString()}
           </p>
         </div>
