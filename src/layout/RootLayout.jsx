@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
 import NavBar from "../components/NavBar";
+import { Footer } from "../components/Footer";
 
 export default function RootLayout() {
   return (
@@ -10,6 +11,9 @@ export default function RootLayout() {
       <main className="bg-background text-foreground">
         <Outlet />
       </main>
+      <footer className="bg-white/25 ">
+        <Footer />
+      </footer>
     </>
   );
 }
