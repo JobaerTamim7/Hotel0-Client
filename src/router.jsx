@@ -10,6 +10,9 @@ import RoomDetails from "./pages/RoomDetails";
 import MyRoomPage from "./pages/MyRooms";
 import Error from "./pages/Error";
 import Contact from "./pages/Contact";
+import UserDashboard from "./pages/UserDashboard";
+import MyReviews from "./pages/MyReviews";
+import About from "./pages/About";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -28,7 +31,7 @@ export const router = createBrowserRouter([
         element: <RoomDetails />,
       },
       {
-        path: "my-bookings",
+        path: "my-rooms",
         element: (
           <PrivateRouteProvider>
             <MyRoomPage />
@@ -36,8 +39,28 @@ export const router = createBrowserRouter([
         ),
       },
       {
+        path: "dashboard",
+        element: (
+          <PrivateRouteProvider>
+            <UserDashboard />
+          </PrivateRouteProvider>
+        ),
+      },
+      {
         path: "contact",
         element: <Contact />,
+      },
+      {
+        path: "my-reviews",
+        element: (
+          <PrivateRouteProvider>
+            <MyReviews />
+          </PrivateRouteProvider>
+        ),
+      },
+      {
+        path: "about",
+        element: <About />,
       },
       {
         path: "*",
