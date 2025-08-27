@@ -1,12 +1,12 @@
 import React from "react";
-import Hero from "../components/Hero";
-import HomeMap from "../components/HomeMap";
-import HomeMapSideCard from "../components/HomeMapSideCard";
-import FAQSection from "../components/FAQ";
-import OurServices from "../components/OurServices";
+import Hero from "../components/Home/Hero";
+import HomeMap from "../components/Home/FindUs/HomeMap";
+import HomeMapSideCard from "../components/Home/FindUs/HomeMapSideCard";
+import FAQSection from "../components/Home/FAQ/FAQ";
+import OurServices from "../components/Home/OurService/OurServices";
 
 export default function Home() {
-  document.title = "Hotel-0 Home";
+  document.title = "Tanzar Home";
   return (
     <div className="py-10">
       <div className="px-10">

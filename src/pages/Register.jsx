@@ -4,7 +4,7 @@ import { NavLink } from "react-router";
 import { BsGoogle } from "react-icons/bs";
 
 export default function Register() {
-  document.title = "Hotel-0 Register";
+  document.title = "Tanzar Register";
   const { registerWithEmailToast, signInWithGoogleWithToast } = useRegister();
   const {
     register,

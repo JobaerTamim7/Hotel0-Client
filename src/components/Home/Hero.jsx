@@ -1,5 +1,5 @@
 import React from "react";
-import Swiping from "./Swiping";
+import Swiping from "../Swiping";
 import { useNavigate } from "react-router";
 import { CgChevronDoubleRight } from "react-icons/cg";
 
@@ -12,7 +12,7 @@ export default function Hero() {
       </div>
 
       <div className="w-full lg:w-1/2 flex flex-col justify-center max-w-xl">
-        <h1 className="text-5xl font-bold mb-8">Welcome to Hotel-0</h1>
+        <h1 className="text-5xl font-bold mb-8">Welcome to Tanzar</h1>
         <p className=" text-lg leading-relaxed mb-8 max-w-md">
           Indulge in a world of refined luxury, breathtaking views, and
           unparalleled service. Nestled in the heart of the city yet surrounded

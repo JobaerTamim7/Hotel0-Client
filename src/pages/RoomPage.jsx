@@ -1,9 +1,10 @@
 import React from "react";
 import { useRoom } from "../hooks/useRoom";
 import RoomCard from "../components/RoomCard";
+import Loading from "../components/Loading";
 
 export default function RoomPage() {
-    document.title = "Hotel-0 Rooms";
+  document.title = "Tanzar Rooms";
   const { data, isLoading, error } = useRoom();
 
   console.log("Rooms data:", data);
@@ -12,7 +13,7 @@ export default function RoomPage() {
     <div className="py-10 px-4 md:px-10">
       <h1 className="text-3xl font-bold mb-6">Available Rooms</h1>
       {isLoading ? (
-        <div>Loading...</div>
+        <Loading />
       ) : error ? (
         <div>Error fetching rooms: {error.message}</div>
       ) : (

@@ -3,11 +3,36 @@
    themes: dracula;
  }
 
+  @property --pulse-size{
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 10px;
+ }
+
  .leaflet-container {
    width: 100vh;
    height: 50vh;
    border-radius: 1rem;
     margin: 0 auto;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.89);
-    
+    box-shadow: 0 0 var(--pulse-size) rgba(255, 255, 255, 0.89);
+    animation: pulse-animation 1s ease-in infinite;
  }
+
+
+ .pulse {
+   box-shadow: 0 0 var(--pulse-size) rgba(255, 255, 255, 0.89);
+   animation: pulse-animation 1s ease-in infinite;
+ }
+
+
+@keyframes pulse-animation {
+  0% {
+    --pulse-size: 10px;
+  }
+  50% {
+    --pulse-size: 30px;
+  }
+  100% {
+    --pulse-size: 10px;
+  }
+}

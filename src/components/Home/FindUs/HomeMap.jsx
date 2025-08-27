@@ -15,7 +15,7 @@ export default function HomeMap() {
       />
       <Marker position={[23.69304289001536, 90.44962612441766]}>
         <Popup>
-          Hotel-0 <br /> WELCOME TO HOTEL-0.
+          Tanzar <br /> WELCOME TO Tanzar.
         </Popup>
       </Marker>
     </MapContainer>

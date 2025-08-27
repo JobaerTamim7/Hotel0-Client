@@ -6,9 +6,10 @@ import {
 } from "../hooks/useRoom";
 import ReviewForm from "../components/ReviewBox";
 import AllReviews from "../components/AllReviews";
+import Loading from "../components/Loading";
 
 export default function RoomDetails() {
-  document.title = "Hotel-0 Room Details";
+  document.title = "Tanzar Room Details";
   const { roomID } = useParams();
   const location = useLocation();
   const mybooked = location.state?.mybooked || false;
@@ -18,7 +19,7 @@ export default function RoomDetails() {
 
   const { data, isLoading, error } = useRoomDetails(roomID);
   if (isLoading) {
-    return <div>Loading room details...</div>;
+    return <Loading />;
   }
   if (error) {
     return <Error />;

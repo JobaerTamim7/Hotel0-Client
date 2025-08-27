@@ -1,3 +1,4 @@
+import Loading from "../components/Loading";
 import useAuth from "../hooks/useAuth";
 import { Navigate, useLocation } from "react-router";
 
@@ -6,7 +7,7 @@ export default function PrivateRouteProvider({ children }) {
   const location = useLocation();
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
   if (!user) {
     return <Navigate to="/auth/login" state={{ from: location }} />;

@@ -42,7 +42,14 @@ export default function NavBar() {
             ))}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Hotel - 0</a>
+        <div className="flex items-center gap-3">
+          <img
+            className="w-12 h-12 rounded-full"
+            src="images/logo.png"
+            alt="Logo"
+          />
+          <a className="btn btn-ghost text-xl">Tanzar</a>
+        </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-10">

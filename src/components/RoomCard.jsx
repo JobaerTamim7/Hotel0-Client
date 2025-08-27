@@ -13,7 +13,7 @@ export default function RoomCard({
 
   return (
     <div
-      className="card bg-base-100 w-96 shadow-[0px_0px_4px] shadow-white"
+      className="card bg-base-100 w-96 shadow-[0px_0px_4px] shadow-white cursor-pointer"
       onClick={() => navigate(`/rooms/${id}`, { state: { mybooked } })}
     >
       <figure>

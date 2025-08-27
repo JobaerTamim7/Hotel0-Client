@@ -5,7 +5,7 @@ import useLogin from "../hooks/useLogin";
 import { useForm } from "react-hook-form";
 
 export default function Login() {
-  document.title = "Hotel-0 Login";
+  document.title = "Tanzar Login";
   const { signInWithGoogleWithToast, signInWithEmailWithToast } = useLogin();
   const {
     handleSubmit,

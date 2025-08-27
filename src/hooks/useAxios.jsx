@@ -7,7 +7,7 @@ export default function useAxios() {
     headers: {
       "Content-Type": "application/json",
     },
+    timeout: 1000,
   });
-
   return axiosInstance;
 }
